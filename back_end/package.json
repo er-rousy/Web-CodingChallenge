@@ -1,0 +1,45 @@
+{
+  "name": "back_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "class-transformer": "^0.2.0",
+    "class-validator": "^0.9.1",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0",
+    "envalid": "^4.1.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "5.4.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.16.0",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/mongoose": "^5.3.7",
+    "@types/node": "^10.12.11",
+    "husky": "^1.2.0",
+    "node-gyp": "^3.8.0",
+    "nodemon": "^1.18.7",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.1"
+  },
+  "scripts": {
+    "dev": "cross-env MONGO_USER=errousy MONGO_PASSWORD=Weldcha3b MONGO_PATH=@webchalange-n0dsk.gcp.mongodb.net/shops PORT=5000 JWT_SECRET=qsdfhqshdfghqsfgjqsghjfgqshfgqs ts-node ./src/server.ts",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "author": "errouy fayssal",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
